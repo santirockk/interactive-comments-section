@@ -1,5 +1,104 @@
-import { nanoid } from "@reduxjs/toolkit";
+import { createAction, nanoid } from "@reduxjs/toolkit";
 
+export const addComment = createAction("comments/addComment", (content, createdAt, user) => {
+    return {
+        payload: {
+            id: nanoid(),
+            content,
+            createdAt,
+            score: 0,
+            user,
+            replies: []
+        }
+    }
+});
+
+export const deleteComment = createAction("comments/deleteComment");
+
+export const updateComment = createAction("comments/uplaoadComment", (commentId, content) => {
+    return{
+        payload: {
+            content,
+            commentId
+        }
+    }
+});
+
+export const addReplyy = createAction("comments/replies/addReply", (commentId, content, createdAt, replyingTo, user) => {
+    return{
+        payload: {
+            commentId,
+            reply: {
+                id: nanoid(),
+                content,
+                createdAt,
+                score: 0,
+                replyingTo,
+                user,
+            }
+        }
+    }
+});
+
+export const deleteReply = createAction("comments/replies/deleteReply", (commentId, replyId) => {
+    return {
+        payload: {
+            commentId,
+            replyId
+        }
+    }
+});
+
+export const updateReply = createAction("comments/replies/uploadReply", (commentId, replyId, content) => {
+    return{
+        payload: {
+            commentId,
+            replyId,
+            content,
+        }
+    }
+});
+
+export const addReplyReply = createAction("comments/replies/addReplyReply", (commentId, content, createdAt, replyingTo, user) => {
+    return {
+        payload: {
+            commentId,
+            reply: {
+                id: nanoid(),
+                content,
+                createdAt,
+                score: 0,
+                replyingTo,
+                user,
+            }
+        }
+    }
+});
+
+export const commentPlusScore = createAction("comments/score/plusScore");
+
+export const commentMinusScore = createAction("comments/score/minusScore");
+
+export const replyPlusScore = createAction("comments/replies/score/plusScore", (commentId, replyId) => {
+    return {
+        payload: {
+            commentId,
+            replyId,
+        }
+    }
+});
+
+export const replyMinusScore = createAction("comments/replies/score/minusScore", (commentId, replyId) => {
+    return {
+        payload: {
+            commentId,
+            replyId,
+        }
+    }
+});
+
+
+/*
 export const addComment = (content, createdAt, user) => {
     return {
         type: "comments/addComment",
@@ -95,12 +194,11 @@ export const commentPlusScore = (commentId) => {
     }  
 }
 
-export const commentMinusScore = (commentId, score) => {
+export const commentMinusScore = (commentId) => {
     return {
         type: "comments/score/minusScore",
         payload: {
             commentId,
-            score: score - 1
         }
     }
 }
@@ -125,3 +223,5 @@ export const replyMinusScore = (commentId, replyId) => {
         }
     }
 }
+
+*/
