@@ -82,7 +82,7 @@ export function Reply({ reply, commentId }) {
             <img src={reply.user.image.png} className="w-7 mr-4" alt={reply.user.username}/>
             <p className="text-black mr-2 font-medium">{reply.user.username}</p>
             {reply.user.username === currentUser.username && (
-              <p className="bg-moderate-blue text-white px-2 text-sm">you</p>
+              <p className="bg-moderate-blue text-white px-2 text-sm py-0">you</p>
             )}
             <p className="ml-3">{reply.createdAt}</p>
           </div>
@@ -156,7 +156,7 @@ export function Reply({ reply, commentId }) {
                 {reply.user.username}
               </p>
               {reply.user.username === currentUser.username && (
-                <p className="bg-moderate-blue text-white you text-sm">you</p>
+                <p className="bg-moderate-blue text-white you text-sm py-0 ">you</p>
               )}
               <p className="ml-rdate pd-t">{reply.createdAt}</p>
               {reply.user.username === currentUser.username ? (
