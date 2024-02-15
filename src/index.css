@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Rubik', sans-serif;
+}
+
+@layer components {
+  .scorebtns {
+    border-radius: 11px;
+    flex: 0 0 auto;
+    width: 40px;
+    height: 99px;
+    justify-content: space-between;
+  }
+
+  .c-c {
+    padding: 24px 24px;
+  }
+
+  .c_name {
+    margin-left: 5px;
+    margin-right: 4px;
+  }
+
+  .reply {
+    margin-top: 20px;
+    margin-bottom: 24px;
+    margin-left: 43px;
+    padding: 24px 24px;
+  }
+
+  .reply_c {
+    margin-bottom: 15px;
+  }
+
+  .you {
+    padding: 2px 7px;
+    margin-left: 1px;
+    margin-right: 8px;
+  }
+
+  .mt-cs {
+    margin-top: 64px;
+  }
+
+  .add-c {
+    padding: 20px 24px;
+  }
+
+  .img-add {
+    width: 40px;
+    height: 44px;
+    padding-top: 4px;
+    margin-right: 16px;
+  }
+
+  .text-add {
+    width: 506px;
+    height: 96px;
+    padding: 10px 23px;
+    margin-bottom: 4px;
+  }
+
+  .snd-md {
+    width: 104px;
+    height: 48px;
+    text-align: center;
+  }
+
+  .ar {
+    padding: 24px 24px;
+  }
+
+  .ar-i {
+    width: 40px;
+    height: 44px;
+    padding-top: 4px;
+  }
+
+  .ar-text {
+    width: 69%;
+  }
+
+  .del-modal {
+    width: 380px;
+  }
+
+
+}
+
+
+@layer utilities {
+  .footer-text {
+    font-size: 11px;
+  }
+  .ml-auto {
+    margin-left: auto;
+  }
+  .w-c {
+    max-width: 730px;
+  }
+  .p-more {
+    padding:2px;
+  }
+  .w-i {
+    width: 32px;
+  }
+  .p-sbt {
+    padding-top: 7px;
+  }
+  .mr-reply {
+    margin-right: 1px;
+  }
+  .mb-c1 {
+    margin-bottom: 15px;
+  }
+  .m-cc {
+    margin-top: 20px;
+  }
+  .mt-r{
+    margin-top: 9px
+  }
+  .ml-r {
+    margin-left: 43px;
+  }
+  .ml-rdate {
+    margin-left: 9px;
+  }
+  .mr-ri {
+    margin-right: 11px;
+  }
+  .mr-ybtns {
+    margin-right: 26px;
+  }
+  .mr-cs {
+    margin-right: 24px;
+  }
+
+}
