@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Challenge Solution](https://your-solution-url.com)
+- Solution URL: [Challenge Solution](https://www.frontendmentor.io/solutions/interactive-comments-section-with-redux-reduxtoolkit-dGByMrWpdO)
 - Live Site URL: [Live Site](https://santirockk.github.io/interactive-comments-section/)
 
 ## My process
