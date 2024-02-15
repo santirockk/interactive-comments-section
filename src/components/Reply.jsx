@@ -79,10 +79,10 @@ export function Reply({ reply, commentId }) {
       <>
         <div className="bg-white mt-4 rounded-lg mx-4 p-4">
           <div className="flex items-center mb-4">
-            <img src={reply.user.image.png} className="w-7 mr-4" />
+            <img src={reply.user.image.png} className="w-7 mr-4" alt={reply.user.username}/>
             <p className="text-black mr-2 font-medium">{reply.user.username}</p>
             {reply.user.username === currentUser.username && (
-              <p className="bg-moderate-blue text-white px-2 text-xs">you</p>
+              <p className="bg-moderate-blue text-white px-2 text-sm">you</p>
             )}
             <p className="ml-3">{reply.createdAt}</p>
           </div>
@@ -151,12 +151,12 @@ export function Reply({ reply, commentId }) {
           />
           <div className="w-full">
             <div className="flex items-center reply_c">
-              <img src={reply.user.image.png} className="w-i mr-ri" />
+              <img src={reply.user.image.png} className="w-i mr-ri" alt={reply.user.username}/>
               <p className="text-black mr-2 font-medium c_name">
                 {reply.user.username}
               </p>
               {reply.user.username === currentUser.username && (
-                <p className="bg-moderate-blue text-white you text-xs">you</p>
+                <p className="bg-moderate-blue text-white you text-sm">you</p>
               )}
               <p className="ml-rdate pd-t">{reply.createdAt}</p>
               {reply.user.username === currentUser.username ? (

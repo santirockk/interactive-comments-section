@@ -79,10 +79,10 @@ export function Comment({ comment }) {
       <>
         <div className="bg-white mt-4 mx-4 rounded-lg p-4 w-c">
           <div className="flex items-center mb-4">
-            <img src={comment.user.image.png} className="w-7 mr-4" />
+            <img src={comment.user.image.png} className="w-7 mr-4" alt={comment.user.username}/>
             <p className="text-black mr-2 font-medium">{comment.user.username}</p>
             {comment.user.username === currentUser.username && (
-              <p className="bg-moderate-blue text-white px-2 text-xs">you</p>
+              <p className="bg-moderate-blue text-white px-2 text-sm">you</p>
             )}
             <p className="ml-3">{comment.createdAt}</p>
           </div>
@@ -152,10 +152,10 @@ export function Comment({ comment }) {
           />
           <div className="w-full">
             <div className="flex items-center mb-c1">
-              <img src={comment.user.image.png} className="w-i mr-3" />
+              <img src={comment.user.image.png} className="w-i mr-3" alt={comment.user.username}/>
               <p className="text-black font-medium c_name">{comment.user.username}</p>
               {comment.user.username === currentUser.username && (
-                <p className="bg-moderate-blue text-white px-2 text-xs">you</p>
+                <p className="bg-moderate-blue text-white px-2 text-sm">you</p>
               )}
               <p className="ml-rdate pd-t">{comment.createdAt}</p>
               {comment.user.username === currentUser.username ? (
