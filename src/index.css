@@ -87,6 +87,23 @@
     width: 380px;
   }
 
+  .scbtns:hover{
+    fill: red;
+  }
+
+  .p-sbtp {
+    padding-top: 3px;
+  }
+
+  .p-sbtm {
+    padding-bottom: 3px;
+  }
+  
+  .p-sbt {
+    padding-top: 3px;
+  }
+
+
 
 }
 
@@ -107,9 +124,7 @@
   .w-i {
     width: 32px;
   }
-  .p-sbt {
-    padding-top: 7px;
-  }
+ 
   .mr-reply {
     margin-right: 1px;
   }

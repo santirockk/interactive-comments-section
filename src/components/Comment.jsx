@@ -94,8 +94,8 @@ export function Comment({ comment }) {
               <div className="flex justify-between">
                 <Scorebtns 
                   score={comment.score}
+                  handlerMinus={minusScoreHandler}
                   handlerPlus={plusScoreHandler}
-                  handlerminus={minusScoreHandler}
                 />
                 {comment.user.username === currentUser.username ? (
                   <YouBtns
