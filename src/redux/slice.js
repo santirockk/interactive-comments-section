@@ -5,7 +5,7 @@ const initialState = {
     ...data,
 }
 
-const rootSlice = createSlice({
+const commentsSlice = createSlice({
     name:"comments",
     initialState: initialState,
     reducers:{
@@ -171,8 +171,8 @@ export const {
     commentMinusScore,
     replyPlusScore,
     replyMinusScore
-} = rootSlice.actions;
+} = commentsSlice.actions;
 
-export const rootReducer = rootSlice.reducer;
+export const commentsReducer = commentsSlice.reducer;
 
 

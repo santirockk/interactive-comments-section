@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getCurrentUser } from "../redux/selectors";
+import { getCurrentUser, getWindow } from "../redux/selectors";
 import { deleteReply, updateReply, replyPlusScore, replyMinusScore, addReplyReply } from "../redux/slice.js";
 import { AddReply } from "./AddReply";
 import { Scorebtns } from "./Scorebtns";
@@ -12,19 +12,8 @@ export function Reply({ reply, commentId }) {
   const [addReply, setAddReply] = useState(false);
   const [edit, setEdit] = useState(false);
   const [remove, setRemove] = useState(false);
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowSize(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const windowSize = useSelector(getWindow)
 
   const currentUser = useSelector(getCurrentUser);
   const dispatch = useDispatch();
@@ -74,7 +63,7 @@ export function Reply({ reply, commentId }) {
   const replyPlusHandler = () => dispatch(replyPlusScore(commentId, reply.id));
   const replyMinusHandler = () => dispatch(replyMinusScore(commentId, reply.id));
 
-  if (windowSize < 768) {
+  if (windowSize.window < 768) {
     return (
       <>
         <div className="bg-white mt-4 rounded-lg mx-4 p-4">
