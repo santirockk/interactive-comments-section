@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { deleteComment, addReplyy, updateComment, commentPlusScore, commentMinusScore} from "../redux/actions";
+import { deleteComment, addReplyy, updateComment, commentPlusScore, commentMinusScore} from "../redux/slice.js";
 import { getCurrentUser } from "../redux/selectors";
 import { AddReply } from "./AddReply";
 import { Scorebtns } from "./Scorebtns";

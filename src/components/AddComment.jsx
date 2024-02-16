@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux"
 import { getCurrentUser } from "../redux/selectors"
-import { addComment } from "../redux/actions";
+import { addComment } from "../redux/slice.js";
 import { SendBtn } from "./SendBtn";
 
 

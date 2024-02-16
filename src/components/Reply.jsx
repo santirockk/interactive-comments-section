@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getCurrentUser } from "../redux/selectors";
-import { deleteReply, updateReply, replyPlusScore, replyMinusScore, addReplyReply } from "../redux/actions";
+import { deleteReply, updateReply, replyPlusScore, replyMinusScore, addReplyReply } from "../redux/slice.js";
 import { AddReply } from "./AddReply";
 import { Scorebtns } from "./Scorebtns";
 import { Update } from "./Update";
